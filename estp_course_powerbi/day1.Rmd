@@ -5,6 +5,7 @@ author:
   - "Øyvind Bruer-Skarsbø"
   - "Carl Franklin Corneil"
 date: '`r Sys.Date()`'
+output_dir: "docs"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
