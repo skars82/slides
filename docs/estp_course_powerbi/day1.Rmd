@@ -1,11 +1,10 @@
 ---
-title: "Introduction to business intelligence (Power BI)"
-subtitle: "ESTP-course"  
+title: "Introduction to buisness intelligence in public staistics (Power BI)"
+subtitle: "Day 1"  
 author: 
-  - "Øyvind Bruer-Skarsbø"
-  - "Carl Franklin Corneil"
+  - "Øyvind Bruer-Skarsbø (SSB)"
+  - "Carl Franklin Corneil (SSB)"
 date: '`r Sys.Date()`'
-output_dir: "../docs"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -325,9 +324,3 @@ Slides created via the R packages:
 [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
-
-```{bash, echo=false}
-cp ~/slides/estp_course_powerbi ~/slides/docs/day1.html
-
-```
-
