@@ -35,6 +35,14 @@ library(xaringanthemer)
 style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
 ## Typography
 
 Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
