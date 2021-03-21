@@ -12,7 +12,7 @@ output:
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
-      ratio: 16:9
+      ratio: 191:100
       countIncrementalSlides: true
 ---
 
