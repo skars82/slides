@@ -12,7 +12,7 @@ output:
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
-      ratio: 191:100
+      ratio: 16:9
       countIncrementalSlides: true
 ---
 
@@ -41,7 +41,7 @@ meta() %>%
       "Course held by European Statitical Training Programme (ESTP) in april of 2021."
     ),
     url = "https://skars82.github.io/slides/estp_course_powerbi/day1.html#1",
-    image = "https://build-your-own-universe.netlify.app/social-card.png",
+    image = "https://github.com/skars82/slides/tree/master/docs/estp_course_powerbi/pictures/twitter_slide.png",
     image_alt = paste(
       "Title slide of day 1 of ESTP-course in Power BI:", 
       "How can Power BI be utilized in public statistics.", 
