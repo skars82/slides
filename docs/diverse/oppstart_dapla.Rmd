@@ -1,0 +1,67 @@
+---
+title: "Testing av verktøy"
+subtitle: "Hvordan går vi frem?"  
+author: 
+  - "Øyvind Bruer-Skarsbø"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r, echo=FALSE, out.height="100%", out.width="100%"}
+
+library(wordcloud2)
+wordcloud2(data = demoFreq, backgroundColor = "#1F4257")
+```
+
+```
+
+
+---
+class: inverse center middle
+
+# Hvilke verkøy er det tenkt at vi skal vi bruke? 
+<br>
+
+| Hva                   | Gammel plattform | DAPLA         | Testes |
+| --------------------- | ---------------- | ------------- | ------ |
+| Programmeringsverktøy | SAS EG           | Jupyterlab    | JA     |
+| Programmeringsspråk   | SAS              | R, PYHTON     | JA     |
+| Versjonshåndtering    | GIT og BITBUCKET | GIT og GITHUB | TJA    |
+| MILJØ                 | LINUX RED HAT    | LINUX UBUNTU  | JA     |
+
+
+---
+layout: true
