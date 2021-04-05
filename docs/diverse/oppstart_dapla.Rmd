@@ -16,6 +16,7 @@ class: center
 
 <br>
 
+
 ```{r, echo=FALSE}
 
 
@@ -58,23 +59,13 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
----
-
-# Testing av verktøy
-
-background-image: url("Pictures/tools.jpg")
-background-position: center
-background-size: contain
-
-
-
-
-
 
 ---
 
 # Oppgaver, mål og tidsplan
 Vi ønsker oss erfaring fra de ulike verktøyene som skal brukes fremover.
+
+--
 
 .pull-left[
 
@@ -89,6 +80,8 @@ Vi ønsker oss erfaring fra de ulike verktøyene som skal brukes fremover.
 - rapportere om status i juni og august
 
 ]
+
+--
 
 .pull-right[
 
@@ -115,7 +108,8 @@ Vi ønsker oss erfaring fra de ulike verktøyene som skal brukes fremover.
 class: inverse center middle
 
 # Hvilke verkøy er det tenkt at vi skal vi bruke? 
-<br>
+
+--
 
 | Hva                   | Gammel plattform | DAPLA         | Testes |
 | --------------------- | ---------------- | ------------- | ------ |
@@ -123,6 +117,21 @@ class: inverse center middle
 | Programmeringsspråk   | SAS              | R, PYHTON     | JA     |
 | Versjonshåndtering    | GIT og BITBUCKET | GIT og GITHUB | TJA    |
 | MILJØ                 | LINUX RED HAT    | LINUX UBUNTU  | JA     |
+
+
+---
+
+
+# Hva må/kan testes?
+<br>
+
+.pull-left[
+
+- Må testes: R, PYTHON og JUPYTERLAB
+
+- Kanskje teste: GIT
+]
+
 
 
 ---
