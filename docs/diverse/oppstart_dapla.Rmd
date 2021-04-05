@@ -1,9 +1,4 @@
 ---
-title: "Testing av verktøy"
-subtitle: "Hvordan går vi frem?"  
-author: 
-  - "Øyvind Bruer-Skarsbø"
-date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
     seal: false
@@ -15,6 +10,28 @@ output:
       ratio: 16:9
       countIncrementalSlides: true
 ---
+class: center 
+
+# TESTING AV VERKTØY
+
+<br>
+
+```{r, echo=FALSE}
+
+
+var1 <- c("DAPLA", "R", "PYTHON","GIT", "GITHUB", "BITBUCKET", "MARKDOWN", "PARQUET", "PANDAS")
+
+var2 <- c(100, 70, 70, 55, 25, 35, 45, 20, 60)
+
+input <- data.frame(var1, var2)
+
+rm(var1,var2)
+
+wordcloud2::wordcloud2(data=input, backgroundColor = "#1F4257", color = "random-light", size=0.6)
+
+```
+
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
