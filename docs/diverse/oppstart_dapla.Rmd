@@ -6,6 +6,7 @@ author:
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
+    seal: false
     css: xaringan-themer.css
     nature:
       slideNumberFormat: "%current%"
@@ -22,7 +23,7 @@ knitr::opts_chunk$set(
   out.width = "100%",
   cache = FALSE,
   echo = TRUE,
-  message = FALSE, 
+  message = FALSE,
   warning = FALSE,
   fig.show = TRUE,
   hiline = TRUE
@@ -40,13 +41,57 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
-```{r, echo=FALSE, out.height="100%", out.width="100%"}
+---
 
-library(wordcloud2)
-wordcloud2(data = demoFreq, backgroundColor = "#1F4257")
-```
+# Testing av verktøy
 
-```
+background-image: url("Pictures/tools.jpg")
+background-position: center
+background-size: contain
+
+
+
+
+
+
+---
+
+# Oppgaver, mål og tidsplan
+Vi ønsker oss erfaring fra de ulike verktøyene som skal brukes fremover.
+
+.pull-left[
+
+### Oppgaver/mål
+
+- Bygge grunnleggende kompetanse
+
+- Dokumentere erfaringer (`Wiki`)
+
+- Komme med innspill til kompetanseheving
+
+- rapportere om status i juni og august
+
+]
+
+.pull-right[
+
+### Ramme & tidsramme
+
+- testing planlagte oppdrag eller faste dritsoppgaver
+
+- følge kurs (f.eks. `edx` eller interne kurs/videoer)
+
+- Starter opp `6.` `april`
+
+- 1/2 dag i uken frem til `31.` `august`
+
+- Bruk statistikkens produktnummer og akt.kode 7. Ved tabelloppdrag kan `500701` benyttes, og `5000601` ved interne kurs.
+
+]
+
+???
+
+
 
 
 ---
@@ -64,4 +109,41 @@ class: inverse center middle
 
 
 ---
-layout: true
+class: center 
+
+# Hvem gjør hva?
+
+--
+
+.pull-left[
+
+## PYTHON
+
+Anders
+
+Magnus
+
+]
+--
+
+.pull-right[
+## R
+
+Stine
+
+Pål
+
+]
+
+--
+
+<br>
+<br>
+<br>
+
+
+### *Øyvind kan tilpasse seg det som trengs*
+
+
+
+
