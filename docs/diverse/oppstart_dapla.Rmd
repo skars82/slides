@@ -10,12 +10,24 @@ output:
       ratio: 16:9
       countIncrementalSlides: true
 ---
-class: center 
+class: middle center 
 
-# TESTING AV VERKTØY
 
-<br>
+.title[
+TESTING AV VERKTØY 
+&#x1F60E;
+]
 
+<style>
+.title {
+  font-size: 6em;
+  color: #F97B64;
+  font-style: italic;
+}
+
+---
+
+class: center middle
 
 ```{r, echo=FALSE}
 
@@ -171,5 +183,65 @@ Pål
 ### *Øyvind kan tilpasse seg det som trengs*
 
 
+---
+class: center
+
+# Hvor gjør vi det?
+
+--
+
+.pull-left[
+
+## sl-python-02
+
+Anders
+
+Magnus
+
+Stine
+
+Pål
+
+
+
+]
+--
+
+.pull-right[
+## DAPLA
+
+Øyvind
+
+]
+
+--
+
+<br>
+<br>
+
+### Alle vet hvordan de bruker den serveren? 
+
+---
+
+
+# Diskusjonspunkter
+
+- Hva ønsker dere å teste? 
+
+--
+
+- Hva tenker dere om GIT? 
+
+--
+
+- Filformat? Arrow...
+
+--
+
+- Hva med dialektene? pandas, baseR, tidyverse, data.table
+
+--
+
+- Andre ting?
 
 
