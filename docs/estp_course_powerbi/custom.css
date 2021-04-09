@@ -1,0 +1,44 @@
+/*Special CSS for the title-page*/
+.title {
+  font-size: 1.5em;
+  color: #D6950F;
+  font-style: italic;
+}
+
+.posi{
+  float: left;
+  padding-left: 222px;
+  font-size: 0.5em;
+  font-style: oblique;
+}
+
+.posi2{
+  float: left;
+  padding-left: 222px;
+  font-size: 0.5em;
+  font-style: oblique;
+}
+
+
+
+/*Change the colors of bullet-points*/
+ul {
+  list-style: none;
+}
+
+li::before {
+  content: "• ";
+  color: #D6950F;
+  padding-right: 10px;
+}
+
+.dib { 
+  display: inline-block; 
+  animation-duration: 1s;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+  animation-delay: 1s;
+      
+}
+
+

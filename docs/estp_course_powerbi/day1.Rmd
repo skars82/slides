@@ -8,7 +8,7 @@ date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
     seal: false
-    css: xaringan-themer.css
+    css: [xaringan-themer.css, custom.css]
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
@@ -77,7 +77,7 @@ style_duo(
   text_color = gray,
   code_inline_color = colorspace::lighten(gray),
   text_bold_color = colorspace::lighten(gray),
-  link_color = blue,
+  link_color = "#D6950F",
   title_slide_text_color = blue,
           # fonts
           header_font_google = google_font("Martel"),
@@ -99,27 +99,63 @@ xaringanExtra::use_logo(
 )
 ```
 
+```{r xaringan-animate-all, echo=FALSE}
+xaringanExtra::use_animate_css()
+```
 
 
 .title[Introduction to business intelligence in public statistics (Power BI)]
 
-.title[20.-22. april]
-
-<style>
-.title {
-  font-size: 1.5em;
-  color: #D6950F;
-  font-style: italic;
-}
-
----
-
-## Introduction to the course
+.title[.posi2[Webinar hosted by European Statistical Training System (ESTP) and Statistics Norway (SSB)]]
+<br>
+.title[.posi[20.-22. april 2021]] 
 
 
 ---
 
-## Getting started
+## About us
+
+.pull-left[
+
+
+```{r, echo=FALSE, out.width="40%", fig.cap="Øyvind Bruer-Skarsbø"}
+knitr::include_graphics("pictures/obr2.png")
+```
+
+*Senior Advisor*  
+*Division of Social Statistics*  
+*Labour Market and Wage Statistics*  
+*Statistics Norway*
+]
+
+.pull-right[
+
+
+```{r, echo=FALSE, out.width="40%", fig.cap="Carl Franklin Corneil"}
+knitr::include_graphics("pictures/obr2.png")
+```
+
+*Advisor*  
+*Division of Social Statistics*  
+*Labour Market and Wage Statistics*  
+*Statistics Norway*
+]
+---
+
+## About this course
+
+- We assume that you have installed .animated.bounce.dib[[Power BI Desktop!](https://powerbi.microsoft.com/en-us/downloads/)]
+--
+<br>
+<br>
+- All resources available at the [course website](https://skars82.github.io/estp_course_pbi/)
+--
+<br>
+<br>
+.animated.pulse.infinite[
+  - Videos with helpfull tips&tricks 
+  ]
+  
 
 
 
