@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Øyvind Bruer-Skarsbø (SSB)" />
     <meta name="author" content="Carl Franklin Corneil (SSB)" />
-    <meta name="date" content="2021-04-08" />
+    <meta name="date" content="2021-04-09" />
     <script src="day1_files/header-attrs/header-attrs.js"></script>
     <meta name="github-repo" content="https://github.com/skars82/slides"/>
     <meta name="twitter:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
@@ -35,15 +35,10 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# Introduction to business intelligence in public statistics (Power BI)
-## Day 1
-### Øyvind Bruer-Skarsbø (SSB)
-### Carl Franklin Corneil (SSB)
-### 2021-04-08
-
----
+class: middle right
+background-image: url(pictures/PowerBI_logo.png)
+background-position: left
 
 
 
@@ -55,10 +50,65 @@ class: center, middle, inverse, title-slide
 
 
 
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(pictures/ssb-logo-rgb300pxl.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+.title[Introduction to business intelligence in public statistics (Power BI)]
+
+.title[20.-22. april]
+
+&lt;style&gt;
+.title {
+  font-size: 1.5em;
+  color: #D6950F;
+  font-style: italic;
+}
 
 ---
 
 ## Introduction to the course
+
+
+---
+
+## Getting started
+
 
 
 

@@ -7,6 +7,7 @@ author:
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
+    seal: false
     css: xaringan-themer.css
     nature:
       slideNumberFormat: "%current%"
@@ -15,6 +16,9 @@ output:
       ratio: 16:9
       countIncrementalSlides: true
 ---
+class: middle right
+background-image: url(pictures/PowerBI_logo.png)
+background-position: left
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -55,9 +59,30 @@ meta() %>%
   )
 ```
 
+```{r, echo=FALSE}
+dark_yellow <- "#EFBE43"
+light_yellow <- "#FDF7E9"
+gray <- "#333333"
+blue <- "#4466B0"
+```
+
+
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+style_duo(
+  # colors
+  primary_color = light_yellow,
+  secondary_color = dark_yellow,
+  header_color = gray,
+  text_color = gray,
+  code_inline_color = colorspace::lighten(gray),
+  text_bold_color = colorspace::lighten(gray),
+  link_color = blue,
+  title_slide_text_color = blue,
+          # fonts
+          header_font_google = google_font("Martel"),
+          text_font_google = google_font("Lato"),
+          code_font_google = google_font("Fira Mono"))
 ```
 
 ```{r xaringan-tile-view, echo=FALSE}
@@ -68,9 +93,34 @@ xaringanExtra::use_tile_view()
 xaringanExtra::use_share_again()
 ```
 
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "pictures/ssb-logo-rgb300pxl.png", position=xaringanExtra::css_position(top="1em", right="1em")
+)
+```
+
+
+
+.title[Introduction to business intelligence in public statistics (Power BI)]
+
+.title[20.-22. april]
+
+<style>
+.title {
+  font-size: 1.5em;
+  color: #D6950F;
+  font-style: italic;
+}
+
 ---
 
 ## Introduction to the course
+
+
+---
+
+## Getting started
+
 
 
 
