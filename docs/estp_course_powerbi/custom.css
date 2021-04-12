@@ -41,4 +41,14 @@ li::before {
       
 }
 
+.bio {
+  position: absolute;
+  left: 350px;
+}
+
+.bio2 {
+  position: absolute;
+  left: 350px;
+  margin-top: 30px;
+}
 

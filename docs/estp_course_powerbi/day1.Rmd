@@ -118,27 +118,44 @@ xaringanExtra::use_animate_css()
 .pull-left[
 
 
-```{r, echo=FALSE, out.width="40%", fig.cap="Øyvind Bruer-Skarsbø"}
+```{r, echo=FALSE, out.width="30%", fig.cap="Øyvind Bruer-Skarsbø"}
 knitr::include_graphics("pictures/obr2.png")
 ```
 
+
+
+
+
+
+
+```{r, echo=FALSE, out.width="30%", fig.cap="Carl Franklin Corneil"}
+knitr::include_graphics("pictures/Carl_bg.png")
+```
+
+
+]
+
+.pull-center[
+.bio[
 *Senior Advisor*  
 *Division of Social Statistics*  
 *Labour Market and Wage Statistics*  
-*Statistics Norway*
-]
+*Statistics Norway*]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-.pull-right[
-
-
-```{r, echo=FALSE, out.width="40%", fig.cap="Carl Franklin Corneil"}
-knitr::include_graphics("pictures/obr2.png")
-```
-
+.bio2[
 *Advisor*  
 *Division of Social Statistics*  
 *Labour Market and Wage Statistics*  
-*Statistics Norway*
+*Statistics Norway*]
 ]
 ---
 
