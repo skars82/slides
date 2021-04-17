@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Øyvind Bruer-Skarsbø (SSB)" />
     <meta name="author" content="Carl Franklin Corneil (SSB)" />
-    <meta name="date" content="2021-04-12" />
+    <meta name="date" content="2021-04-17" />
     <script src="day1_files/header-attrs/header-attrs.js"></script>
     <meta name="github-repo" content="https://github.com/skars82/slides"/>
     <meta name="twitter:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
@@ -32,6 +32,19 @@
     <link href="day1_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
     <script src="day1_files/xaringanExtra-shareagain/shareagain.js"></script>
     <link href="day1_files/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="day1_files/fabric/fabric.min.js"></script>
+    <link href="day1_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="day1_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <script src="day1_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="day1_files/jquery/jquery.min.js"></script>
+    <link href="day1_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="day1_files/datatables-binding/datatables.js"></script>
+    <link href="day1_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="day1_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="day1_files/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="day1_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="day1_files/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -92,12 +105,28 @@ top:1em;right:1em;
 
 
 
+
 .title[Introduction to business intelligence in public statistics (Power BI)]
 
 .title[.posi2[Webinar hosted by European Statistical Training System (ESTP) and Statistics Norway (SSB)]]
 &lt;br&gt;
 .title[.posi[20.-22. april 2021]] 
 
+???
+
+- Welcome
+&lt;br&gt;
+&lt;br&gt;
+- First ESTP-course
+&lt;br&gt;
+&lt;br&gt;
+- a large group
+&lt;br&gt;
+&lt;br&gt;
+- why the interest
+&lt;br&gt;
+&lt;br&gt;
+- challenges with a webinar
 
 ---
 
@@ -110,11 +139,6 @@ top:1em;right:1em;
 &lt;img src="pictures/obr2.png" alt="Øyvind Bruer-Skarsbø" width="30%" /&gt;
 &lt;p class="caption"&gt;Øyvind Bruer-Skarsbø&lt;/p&gt;
 &lt;/div&gt;
-
-
-
-
-
 
 
 &lt;div class="figure"&gt;
@@ -148,20 +172,215 @@ top:1em;right:1em;
 *Statistics Norway*]
 ]
 ---
+class: inverse center middle right
+
+## Aim of this course
+
+
+.quote[
+The aim of this course is to give the participants an understanding of how a business intelligence tool like Power BI can be usefull in the production of official statistics, and show how to build basic dashboards using Power BI Desktop.]
+
+
+---
 
 ## About this course
 
-- We assume that you have installed .animated.bounce.dib[[Power BI Desktop!](https://powerbi.microsoft.com/en-us/downloads/)]
---
-&lt;br&gt;
-&lt;br&gt;
+
 - All resources available at the [course website](https://skars82.github.io/estp_course_pbi/)
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- We assume that you have installed .animated.bounce.dib[[Power BI Desktop!](https://powerbi.microsoft.com/en-us/downloads/)]
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- We are a big group (35 participants)
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Lets divide into 7 groups with 5 each for discussions
+
+
+---
+class: inverse center middle
+
+<div id="htmlwidget-ca4b7425c398d95ea3e0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ca4b7425c398d95ea3e0">{"x":{"filter":"none","data":[["Klodiana Ducka","Julia Maestro","Dovile Butkeviciute","Antoine Tanguy","Rui Gouveia"],["Kelly Sabbe","Rogelio Lopez","Mike Bissener","Siri Lozano-Handelsby","Daniela Costa Ramos"],["Deyan Slavov","Mátyás Milkovics","Marica Messina","Svetlana Badina","Matej Stare"],["Maria Kjærsgård-Jensen","Katalin Bányász","Lucien May","Henrik Burvang","Helena Cermáková"],["Marianne Vester","Evelin Oláhné Gyurics","Marie Waltzer","Dominik Krezolek","Kristína Csongárová"],["Ines Martin","Zsuzsanna Berendi","Jelena Voronova","Tomasz Brzdak","Lucia Šimeková"],["Rogelio Pujol Rodriguez","Sorcha OCallaghan","lvijs Silins","Bigniew Florianczyk","Mert Kocausta"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Group1<\/th>\n      <th>Group2<\/th>\n      <th>Group3<\/th>\n      <th>Group4<\/th>\n      <th>Group5<\/th>\n      <th>Group6<\/th>\n      <th>Group7<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+
+--
+
+&lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Yellowtail&amp;display=swap" rel="stylesheet"&gt;
+
+.handw[Discussions]
+
+--
+
+.handw2[Help eachother]
+
+--
+
+.handw3[1 group leader that can speaks for the group]
+
+---
+## What is Business intelligence (BI)? 
+
+- Tools to ~~easily~~ extract and communicate insights from data
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Response to the growing amount of data in all organizations
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Make an organisation less dependent on its IT-departement
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- An answer to the "webbrowser-takeover"
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- A javascript-free life &amp;#x1F60E;  
+
+
+&lt;img style="float: right;" alt="" src="https://media.giphy.com/media/5PhpuOph9pwoyuqHjd/giphy.gif" /&gt;
+&lt;div style="clear: right"&gt;
+   ...text...
+&lt;/div&gt; 
+
+
+---
+class: top left
+background-image: url(pictures/gartner_2020.png)
+background-size: 80% 80%
+background-position: bottom center
+
+## Why Power BI?
+
+
+---
+class: inverse center middle
+
+&lt;div class="container"&gt;
+&lt;blockquote class="brooks"&gt;
+I web, therefore I am &lt;strike&gt;spiderman&lt;/strike&gt;
+&lt;br&gt;
+&lt;footer&gt;Yihui Xie, RStudio&lt;/footer&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+
+---
+
+## Fundamentals of Power BI
+
+- Microsoft product
+&lt;br&gt;
+&lt;br&gt;
+- Desktop-version is free, and the rest costs
+&lt;br&gt;
+&lt;br&gt;
+- Can handle most data sources...even big data!
+&lt;br&gt;
+&lt;br&gt;
+
+
+
+---
+class: inverse left 
+background-image: url(pictures/pipeline.png)
+background-position: center middle
+
+## Basic PBI pipeline
+
+
+  
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Breaktime!!]
+---
+
+
+## Main parts of Power BI
+
+--
+
+.pull-left[
+
+### &lt;span style="color: #EFBE43;"&gt;1. Report window&lt;/span&gt;
+
+- Visualizing
+&lt;br&gt;
+&lt;br&gt;
+- Data model
+&lt;br&gt;
+&lt;br&gt;
+- Publishing
+]
+
+--
+
+.pull-right[
+
+### &lt;span style="color: #EFBE43;"&gt;2. Power Query&lt;/span&gt;
+
+- Extract/import data
+&lt;br&gt;
+&lt;br&gt;
+- Transform data
+&lt;br&gt;
+&lt;br&gt;
+- Load data
+
+]
+
 --
 &lt;br&gt;
 &lt;br&gt;
-.animated.pulse.infinite[
-  - Videos with helpfull tips&amp;tricks 
-  ]
+&lt;br&gt;
+&lt;span style="color: #EFBE43;font-size: 3em;"&gt; Lets open Power BI Desktop!!&lt;/span&gt;
+
+
+---
+
+## Task 1: Importing (more) data
+
+
+- **Import** and **append** the the rest of the csv-files. Remember to do the same transformations as we did with with the first dataset!  
+
+*Hint: There are many ways to do this, but remember the trick of duplicating queries in Power Query.
+&lt;br&gt;
+&lt;br&gt;
+- After youre done importing data, check that data types and other things have not changed. 
+&lt;br&gt;
+&lt;br&gt;
+- Load the data into the report-window. 
+&lt;br&gt;
+&lt;br&gt;
+- Create a line chart with date on the x-axis and the number of people on the y-axis. 
+
+
+---
+
+## Building a data model
+
+
+
+
+
+
+
+
+
+
   
 
 

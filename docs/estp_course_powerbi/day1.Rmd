@@ -103,6 +103,9 @@ xaringanExtra::use_logo(
 xaringanExtra::use_animate_css()
 ```
 
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
 
 .title[Introduction to business intelligence in public statistics (Power BI)]
 
@@ -110,6 +113,21 @@ xaringanExtra::use_animate_css()
 <br>
 .title[.posi[20.-22. april 2021]] 
 
+???
+
+- Welcome
+<br>
+<br>
+- First ESTP-course
+<br>
+<br>
+- a large group
+<br>
+<br>
+- why the interest
+<br>
+<br>
+- challenges with a webinar
 
 ---
 
@@ -121,11 +139,6 @@ xaringanExtra::use_animate_css()
 ```{r, echo=FALSE, out.width="30%", fig.cap="Øyvind Bruer-Skarsbø"}
 knitr::include_graphics("pictures/obr2.png")
 ```
-
-
-
-
-
 
 
 ```{r, echo=FALSE, out.width="30%", fig.cap="Carl Franklin Corneil"}
@@ -158,20 +171,230 @@ knitr::include_graphics("pictures/Carl_bg.png")
 *Statistics Norway*]
 ]
 ---
+class: inverse center middle right
+
+## Aim of this course
+
+
+.quote[
+The aim of this course is to give the participants an understanding of how a business intelligence tool like Power BI can be usefull in the production of official statistics, and show how to build basic dashboards using Power BI Desktop.]
+
+
+---
 
 ## About this course
 
-- We assume that you have installed .animated.bounce.dib[[Power BI Desktop!](https://powerbi.microsoft.com/en-us/downloads/)]
---
-<br>
-<br>
+
 - All resources available at the [course website](https://skars82.github.io/estp_course_pbi/)
+<br>
+<br>
+
+--
+- We assume that you have installed .animated.bounce.dib[[Power BI Desktop!](https://powerbi.microsoft.com/en-us/downloads/)]
+<br>
+<br>
+
+--
+- We are a big group (35 participants)
+<br>
+<br>
+
+--
+- Lets divide into 7 groups with 5 each for discussions
+
+
+---
+class: inverse center middle
+
+```{r, echo=FALSE}
+library(magrittr)
+library(DT)
+Group1 <- c("Klodiana Ducka", "Julia Maestro", "Dovilė Butkevičiūtė", "Antoine Tanguy", "Rui Gouveia")
+Group2 <- c("Kelly Sabbe", "Rogelio Lopez", "Mike Bissener", "Siri Lozano-Handelsby", "Daniela Costa Ramos")
+Group3 <- c("Deyan Slavov", "Mátyás Milkovics", "Marica Messina", "Svetlana Badina", "Matej Stare")
+Group4 <- c("Maria Kjærsgård-Jensen", "Katalin Bányász", "Lucien May", "Henrik Burvang", "Helena Čermáková")
+Group5 <- c("Marianne Vester", "Evelin Oláhné Gyurics", "Marie Waltzer", "Dominik Krężołek", "Kristína Csongárová")
+Group6 <- c("Ines Martin", "Zsuzsanna Berendi", "Jeļena Voronova", "Tomasz Brzdak", "Lucia Šimeková")
+Group7 <- c("Rogelio Pujol Rodriguez", "Sorcha OCallaghan", "lvijs Silins", "Bigniew Florianczyk", "Mert Kocausta")
+x <- data.table::data.table(Group1, Group2, Group3, Group4, Group5, Group6, Group7)
+datatable(x, 
+          rownames = FALSE, 
+          filter = "none",
+          options=list(dom="t",ordering=F)) %>%
+  formatStyle(columns=colnames(.), fontSize="50%")
+```
+
+--
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+.handw[Discussions]
+
+--
+
+.handw2[Help eachother]
+
+--
+
+.handw3[1 group leader that can speaks for the group]
+
+---
+## What is Business intelligence (BI)? 
+
+- Tools to ~~easily~~ extract and communicate insights from data
+<br>
+<br>
+
+--
+- Response to the growing amount of data in all organizations
+<br>
+<br>
+
+--
+- Make an organisation less dependent on its IT-departement
+<br>
+<br>
+
+--
+- An answer to the "webbrowser-takeover"
+<br>
+<br>
+
+--
+- A javascript-free life &#x1F60E;  
+
+
+<img style="float: right;" alt="" src="https://media.giphy.com/media/5PhpuOph9pwoyuqHjd/giphy.gif" />
+<div style="clear: right">
+   ...text...
+</div> 
+
+
+---
+class: top left
+background-image: url(pictures/gartner_2020.png)
+background-size: 80% 80%
+background-position: bottom center
+
+## Why Power BI?
+
+
+---
+class: inverse center middle
+
+<div class="container">
+<blockquote class="brooks">
+I web, therefore I am <strike>spiderman</strike>
+<br>
+<footer>Yihui Xie, RStudio</footer>
+</blockquote>
+</div>
+
+---
+
+## Fundamentals of Power BI
+
+- Microsoft product
+<br>
+<br>
+- Desktop-version is free, and the rest costs
+<br>
+<br>
+- Can handle most data sources...even big data!
+<br>
+<br>
+
+
+
+---
+class: inverse left 
+background-image: url(pictures/pipeline.png)
+background-position: center middle
+
+## Basic PBI pipeline
+
+
+  
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Breaktime!!]
+---
+
+
+## Main parts of Power BI
+
+--
+
+.pull-left[
+
+### <span style="color: #EFBE43;">1. Report window</span>
+
+- Visualizing
+<br>
+<br>
+- Data model
+<br>
+<br>
+- Publishing
+]
+
+--
+
+.pull-right[
+
+### <span style="color: #EFBE43;">2. Power Query</span>
+
+- Extract/import data
+<br>
+<br>
+- Transform data
+<br>
+<br>
+- Load data
+
+]
+
 --
 <br>
 <br>
-.animated.pulse.infinite[
-  - Videos with helpfull tips&tricks 
-  ]
+<br>
+<span style="color: #EFBE43;font-size: 3em;"> Lets open Power BI Desktop!!</span>
+
+
+---
+
+## Task 1: Importing (more) data
+
+
+- **Import** and **append** the the rest of the csv-files. Remember to do the same transformations as we did with with the first dataset!  
+
+*Hint: There are many ways to do this, but remember the trick of duplicating queries in Power Query.
+<br>
+<br>
+- After youre done importing data, check that data types and other things have not changed. 
+<br>
+<br>
+- Load the data into the report-window. 
+<br>
+<br>
+- Create a line chart with date on the x-axis and the number of people on the y-axis. 
+
+
+---
+
+## Building a data model
+
+
+
+
+
+
+
+
+
+
   
 
 
