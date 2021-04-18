@@ -19,6 +19,15 @@
   font-style: oblique;
 }
 
+.yellow {
+  font-size: 2.0em;
+  color: #D6950F;
+}
+
+.yellow2 {
+  font-size: 1.3em;
+  color: #D6950F;
+}
 
 
 /*Change the colors of bullet-points*/
@@ -38,7 +47,14 @@ li::before {
   animation-iteration-count: 10;
   animation-direction: alternate;
   animation-delay: 1s;
-      
+}
+
+.dib1 {
+  display: inline-block; 
+  animation-duration: 1s;
+  animation-iteration-count: 60;
+  animation-direction: alternate;
+  animation-delay: 0s;
 }
 
 .dib2 { 
@@ -46,7 +62,7 @@ li::before {
   animation-duration: 1s;
   animation-iteration-count: 10;
   animation-direction: alternate;
-  animation-delay: 2s;
+  animation-delay: 1s;
   font-size: 5em;
       
 }
@@ -160,6 +176,10 @@ footer {
       z-index: -1;
    }
 }
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Øyvind Bruer-Skarsbø (SSB)" />
     <meta name="author" content="Carl Franklin Corneil (SSB)" />
-    <meta name="date" content="2021-04-17" />
+    <meta name="date" content="2021-04-18" />
     <script src="day1_files/header-attrs/header-attrs.js"></script>
     <meta name="github-repo" content="https://github.com/skars82/slides"/>
     <meta name="twitter:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
@@ -36,15 +36,6 @@
     <link href="day1_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
     <script src="day1_files/xaringanExtra-scribble/scribble.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
-    <script src="day1_files/htmlwidgets/htmlwidgets.js"></script>
-    <script src="day1_files/jquery/jquery.min.js"></script>
-    <link href="day1_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="day1_files/datatables-binding/datatables.js"></script>
-    <link href="day1_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="day1_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="day1_files/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="day1_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
-    <script src="day1_files/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -205,27 +196,6 @@ The aim of this course is to give the participants an understanding of how a bus
 
 
 ---
-class: inverse center middle
-
-<div id="htmlwidget-ca4b7425c398d95ea3e0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ca4b7425c398d95ea3e0">{"x":{"filter":"none","data":[["Klodiana Ducka","Julia Maestro","Dovile Butkeviciute","Antoine Tanguy","Rui Gouveia"],["Kelly Sabbe","Rogelio Lopez","Mike Bissener","Siri Lozano-Handelsby","Daniela Costa Ramos"],["Deyan Slavov","Mátyás Milkovics","Marica Messina","Svetlana Badina","Matej Stare"],["Maria Kjærsgård-Jensen","Katalin Bányász","Lucien May","Henrik Burvang","Helena Cermáková"],["Marianne Vester","Evelin Oláhné Gyurics","Marie Waltzer","Dominik Krezolek","Kristína Csongárová"],["Ines Martin","Zsuzsanna Berendi","Jelena Voronova","Tomasz Brzdak","Lucia Šimeková"],["Rogelio Pujol Rodriguez","Sorcha OCallaghan","lvijs Silins","Bigniew Florianczyk","Mert Kocausta"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Group1<\/th>\n      <th>Group2<\/th>\n      <th>Group3<\/th>\n      <th>Group4<\/th>\n      <th>Group5<\/th>\n      <th>Group6<\/th>\n      <th>Group7<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
-
---
-
-&lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Yellowtail&amp;display=swap" rel="stylesheet"&gt;
-
-.handw[Discussions]
-
---
-
-.handw2[Help eachother]
-
---
-
-.handw3[1 group leader that can speaks for the group]
-
----
 ## What is Business intelligence (BI)? 
 
 - Tools to ~~easily~~ extract and communicate insights from data
@@ -303,12 +273,47 @@ background-position: center middle
 
   
 ---
+
+## Group discussions
+
+.pull-left[
+
+### How?
+
+- 5 in each group
+&lt;br&gt;
+&lt;br&gt;
+- 15 minutes
+&lt;br&gt;
+&lt;br&gt;
+- select 1 group leader
+&lt;br&gt;
+&lt;br&gt;
+]
+
+--
+.pull-right[
+### What?
+
+- How are you gonna use PBI ? 
+&lt;br&gt;
+&lt;br&gt;
+- Power BI service implemented? 
+&lt;br&gt;
+&lt;br&gt;
+- Why did your boss send you here? 
+&lt;br&gt;
+&lt;br&gt;
+]
+
+
+
+---
 class: inverse center middle
 
 .animated.heartBeat.dib2[Breaktime!!]
+
 ---
-
-
 ## Main parts of Power BI
 
 --
@@ -371,13 +376,139 @@ class: inverse center middle
 ---
 
 ## Building a data model
+.pull-left[
+
+### Star schema
+
+- fundamental part the PBI-workflow
+&lt;br&gt;
+&lt;br&gt;
+- 1 table that has all the variables to be aggregated
+&lt;br&gt;
+&lt;br&gt;
+- all other information separated out to other tables
+&lt;br&gt;
+&lt;br&gt;
+- requires some experience to set up if the data is large and you want to track changes within units over time (slowly changing dimensions)
+&lt;br&gt;
+&lt;br&gt;
+- Dont worry!&amp;#x1f60c; Only simple examples in this course..
+
+]
+ 
+--
+.pull.right[
+&lt;img src="pictures/star_schema.png" width="50%" /&gt;
+--
+.animated.pulse.dib.yellow[Lets open Power BI!]
+]
 
 
+---
+## Task 2: Adding datasets to the model
+
+- Import the file *sn07.dim.csv* (Standard Industrial Classification 2007)
+&lt;br&gt;
+&lt;br&gt;
+- Clean the data so that we can connect it to to our main table
+&lt;br&gt;
+&lt;br&gt;
+- Load data from Power Query to report page
+&lt;br&gt;
+&lt;br&gt;
+- Connect it to the main dataset
+&lt;br&gt;
+&lt;br&gt;
+- Create a matrix-visual that allows the user easily drill up and down from 1-digit to 5-digit NACE2007. The drilling should happen by the NACE-name and not the NACE-code! 
+
+### Extra-task:
+
+- Manually create a dimension-table for gender and connect it to the main dataset. Create a slicer that lets the user select which sex is diplayed in the matrix. 
 
 
+---
+## DAX &amp; MEASURES
+
+- DAX is the "programming language" of the report window. [See documentation](https://docs.microsoft.com/en-us/dax/dax-overview) 
+&lt;br&gt;
+&lt;br&gt;
+- DAX is used to create measures, calculated columns and calculated tables. 
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;style&gt;
+div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-radius: 5px; padding: 20px;}
+&lt;/style&gt;
+&lt;div class = "blue"&gt;
+Measures are dynamic calculation formulas where the results change depending on context.
+&lt;/div&gt;
+
+- Measures a by far the most important and the focus in this course. 
+&lt;br&gt;
+&lt;br&gt;
+- Organize your Measures in a separate table
+
+.pull-right[
+&lt;img src="pictures/measures_table.PNG" width="40%" /&gt;
+]
+
+---
+
+## Basic DAX
 
 
+.pull-left[
 
+### Syntax
+
+
+`\(MeasureName=\)`                   
+  
+`\(Function('TableName'[Column])\)`  
+
+
+.yellow2[for example]
+
+
+`\(People=COUNT('factable'[pid])\)` 
+
+.yellow2[counts the number of rows in the column **pid** in the table **factable**.]  
+]
+
+--
+
+.pull-right[
+
+### Important functions
+
+- SUM
+- COUNT
+- DISTINCTCOUNT
+- CALCULATE
+- FILTER
+- SELECTEDVALUE
+]
+
+
+---
+
+## DAX Operators
+
+
+![](pictures/operators.PNG)
+
+
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Lets write  
+some DAX!!]
+
+
+---
+Task 3: Write more DAX
+
+- 
 
 
 

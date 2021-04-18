@@ -204,42 +204,6 @@ The aim of this course is to give the participants an understanding of how a bus
 
 
 ---
-class: inverse center middle
-
-```{r, echo=FALSE}
-library(magrittr)
-library(DT)
-Group1 <- c("Klodiana Ducka", "Julia Maestro", "Dovilė Butkevičiūtė", "Antoine Tanguy", "Rui Gouveia")
-Group2 <- c("Kelly Sabbe", "Rogelio Lopez", "Mike Bissener", "Siri Lozano-Handelsby", "Daniela Costa Ramos")
-Group3 <- c("Deyan Slavov", "Mátyás Milkovics", "Marica Messina", "Svetlana Badina", "Matej Stare")
-Group4 <- c("Maria Kjærsgård-Jensen", "Katalin Bányász", "Lucien May", "Henrik Burvang", "Helena Čermáková")
-Group5 <- c("Marianne Vester", "Evelin Oláhné Gyurics", "Marie Waltzer", "Dominik Krężołek", "Kristína Csongárová")
-Group6 <- c("Ines Martin", "Zsuzsanna Berendi", "Jeļena Voronova", "Tomasz Brzdak", "Lucia Šimeková")
-Group7 <- c("Rogelio Pujol Rodriguez", "Sorcha OCallaghan", "lvijs Silins", "Bigniew Florianczyk", "Mert Kocausta")
-x <- data.table::data.table(Group1, Group2, Group3, Group4, Group5, Group6, Group7)
-datatable(x, 
-          rownames = FALSE, 
-          filter = "none",
-          options=list(dom="t",ordering=F)) %>%
-  formatStyle(columns=colnames(.), fontSize="50%")
-```
-
---
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-
-.handw[Discussions]
-
---
-
-.handw2[Help eachother]
-
---
-
-.handw3[1 group leader that can speaks for the group]
-
----
 ## What is Business intelligence (BI)? 
 
 - Tools to ~~easily~~ extract and communicate insights from data
@@ -317,12 +281,47 @@ background-position: center middle
 
   
 ---
+
+## Group discussions
+
+.pull-left[
+
+### How?
+
+- 5 in each group
+<br>
+<br>
+- 15 minutes
+<br>
+<br>
+- select 1 group leader
+<br>
+<br>
+]
+
+--
+.pull-right[
+### What?
+
+- How are you gonna use PBI ? 
+<br>
+<br>
+- Power BI service implemented? 
+<br>
+<br>
+- Why did your boss send you here? 
+<br>
+<br>
+]
+
+
+
+---
 class: inverse center middle
 
 .animated.heartBeat.dib2[Breaktime!!]
+
 ---
-
-
 ## Main parts of Power BI
 
 --
@@ -385,13 +384,143 @@ class: inverse center middle
 ---
 
 ## Building a data model
+.pull-left[
+
+### Star schema
+
+- fundamental part the PBI-workflow
+<br>
+<br>
+- 1 table that has all the variables to be aggregated
+<br>
+<br>
+- all other information separated out to other tables
+<br>
+<br>
+- requires some experience to set up if the data is large and you want to track changes within units over time (slowly changing dimensions)
+<br>
+<br>
+- Dont worry!&#x1f60c; Only simple examples in this course..
+
+]
+ 
+--
+.pull.right[
+```{r, echo=FALSE, out.width="50%"}
+knitr::include_graphics("pictures/star_schema.png")
+```
+--
+.animated.pulse.dib.yellow[Lets open Power BI!]
+]
 
 
+---
+## Task 2: Adding datasets to the model
+
+- Import the file *sn07.dim.csv* (Standard Industrial Classification 2007)
+<br>
+<br>
+- Clean the data so that we can connect it to to our main table
+<br>
+<br>
+- Load data from Power Query to report page
+<br>
+<br>
+- Connect it to the main dataset
+<br>
+<br>
+- Create a matrix-visual that allows the user easily drill up and down from 1-digit to 5-digit NACE2007. The drilling should happen by the NACE-name and not the NACE-code! 
+
+### Extra-task:
+
+- Manually create a dimension-table for gender and connect it to the main dataset. Create a slicer that lets the user select which sex is diplayed in the matrix. 
 
 
+---
+## DAX & MEASURES
+
+- DAX is the "programming language" of the report window. [See documentation](https://docs.microsoft.com/en-us/dax/dax-overview) 
+<br>
+<br>
+- DAX is used to create measures, calculated columns and calculated tables. 
+<br>
+<br>
+
+<style>
+div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+Measures are dynamic calculation formulas where the results change depending on context.
+</div>
+
+- Measures a by far the most important and the focus in this course. 
+<br>
+<br>
+- Organize your Measures in a separate table
+
+.pull-right[
+```{r, echo=FALSE, out.width="40%"}
+knitr::include_graphics("pictures/measures_table.PNG")
+```
+]
+
+---
+
+## Basic DAX
 
 
+.pull-left[
 
+### Syntax
+
+
+$MeasureName=$                   
+  
+$Function('TableName'[Column])$  
+
+
+.yellow2[for example]
+
+
+$People=COUNT('factable'[pid])$ 
+
+.yellow2[counts the number of rows in the column **pid** in the table **factable**.]  
+]
+
+--
+
+.pull-right[
+
+### Important functions
+
+- SUM
+- COUNT
+- DISTINCTCOUNT
+- CALCULATE
+- FILTER
+- SELECTEDVALUE
+]
+
+
+---
+
+## DAX Operators
+
+
+![](pictures/operators.PNG)
+
+
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Lets write  
+some DAX!!]
+
+
+---
+Task 3: Write more DAX
+
+- 
 
 
 
