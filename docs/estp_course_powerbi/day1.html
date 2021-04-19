@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Øyvind Bruer-Skarsbø (SSB)" />
     <meta name="author" content="Carl Franklin Corneil (SSB)" />
-    <meta name="date" content="2021-04-18" />
+    <meta name="date" content="2021-04-19" />
     <script src="day1_files/header-attrs/header-attrs.js"></script>
     <meta name="github-repo" content="https://github.com/skars82/slides"/>
     <meta name="twitter:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
@@ -114,10 +114,10 @@ top:1em;right:1em;
 - a large group
 &lt;br&gt;
 &lt;br&gt;
-- why the interest
-&lt;br&gt;
-&lt;br&gt;
 - challenges with a webinar
+&lt;br&gt;
+&lt;br&gt;
+- why the interest
 
 ---
 
@@ -254,14 +254,39 @@ I web, therefore I am &lt;strike&gt;spiderman&lt;/strike&gt;
 - Microsoft product
 &lt;br&gt;
 &lt;br&gt;
+
+--
+- Very well integrated with the rest of Microsoft 365
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- "*cradle to grave*" solution (from source-data to embeddable link)
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Tool for (mostly) descriptive statistics
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- You .yellow1[can] use it without code
+&lt;br&gt;
+&lt;br&gt;
+
+--
 - Desktop-version is free, and the rest costs
 &lt;br&gt;
 &lt;br&gt;
+
+--
 - Can handle most data sources...even big data!
 &lt;br&gt;
 &lt;br&gt;
 
-
+--
+- can do webscraping, text-analyzes, machine-learning
 
 ---
 class: inverse left 
@@ -271,10 +296,17 @@ background-position: center middle
 ## Basic PBI pipeline
 
 
-  
+
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Breaktime!!]
+
 ---
 
 ## Group discussions
+
+--
 
 .pull-left[
 
@@ -306,12 +338,6 @@ background-position: center middle
 &lt;br&gt;
 ]
 
-
-
----
-class: inverse center middle
-
-.animated.heartBeat.dib2[Breaktime!!]
 
 ---
 ## Main parts of Power BI
@@ -351,7 +377,7 @@ class: inverse center middle
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
-&lt;span style="color: #EFBE43;font-size: 3em;"&gt; Lets open Power BI Desktop!!&lt;/span&gt;
+.animated.heartBeat.dib2.yellow[Lets open Power BI!]
 
 
 ---
@@ -376,6 +402,8 @@ class: inverse center middle
 ---
 
 ## Building a data model
+
+--
 .pull-left[
 
 ### Star schema
@@ -399,9 +427,19 @@ class: inverse center middle
 --
 .pull.right[
 &lt;img src="pictures/star_schema.png" width="50%" /&gt;
+
+]
+
 --
 .animated.pulse.dib.yellow[Lets open Power BI!]
-]
+
+
+???
+
+- Create date table
+&lt;br&gt;
+&lt;br&gt;
+- Create region_dim
 
 
 ---
@@ -427,14 +465,19 @@ class: inverse center middle
 
 
 ---
-## DAX &amp; MEASURES
+## DAX
 
+--
 - DAX is the "programming language" of the report window. [See documentation](https://docs.microsoft.com/en-us/dax/dax-overview) 
 &lt;br&gt;
 &lt;br&gt;
+
+--
 - DAX is used to create measures, calculated columns and calculated tables. 
 &lt;br&gt;
 &lt;br&gt;
+
+--
 
 &lt;style&gt;
 div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-radius: 5px; padding: 20px;}
@@ -443,9 +486,14 @@ div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-ra
 Measures are dynamic calculation formulas where the results change depending on context.
 &lt;/div&gt;
 
+
+--
+
 - Measures a by far the most important and the focus in this course. 
 &lt;br&gt;
 &lt;br&gt;
+
+--
 - Organize your Measures in a separate table
 
 .pull-right[
@@ -506,9 +554,55 @@ some DAX!!]
 
 
 ---
-Task 3: Write more DAX
 
-- 
+## Task 3: Write more DAX
+
+- Create a visual that in some way shows the number of workers in each region.
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Insert a slicer that lets the "user" filter by year.  
+&lt;br&gt;
+&lt;br&gt;
+
+--
+- Create a measures that shows the count of working people last year relative to the chosen year. Copy-paste the visual from [1] and replace the measure with the new measure. 
+
+
+---
+
+## Project for day 2
+
+
+- Pick a data source that is relevant to you and your work (API, database, csv, web, etc.)
+&lt;br&gt;
+&lt;br&gt;
+- Think about what you want to display 
+&lt;br&gt;
+&lt;br&gt;
+- Build a data model with the data
+&lt;br&gt;
+&lt;br&gt;
+- Use dax to calculate measures
+&lt;br&gt;
+&lt;br&gt;
+- Use company colors and logos to beatify your report
+&lt;br&gt;
+&lt;br&gt;
+- Do a project that lets finish in a day (dont be over-ambitious...)
+&lt;br&gt;
+&lt;br&gt;
+- Send us pdf-copy at the end of the day
+&lt;br&gt;
+&lt;br&gt;
+- On day 3 you show it to the group and discuss
+&lt;br&gt;&lt;br&gt;
+
+.yellow.dib[GOOD LUCK &amp;#128513;]
+
+
+
 
 
 

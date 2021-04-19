@@ -124,10 +124,10 @@ xaringanExtra::use_scribble()
 - a large group
 <br>
 <br>
-- why the interest
-<br>
-<br>
 - challenges with a webinar
+<br>
+<br>
+- why the interest
 
 ---
 
@@ -262,14 +262,39 @@ I web, therefore I am <strike>spiderman</strike>
 - Microsoft product
 <br>
 <br>
+
+--
+- Very well integrated with the rest of Microsoft 365
+<br>
+<br>
+
+--
+- "*cradle to grave*" solution (from source-data to embeddable link)
+<br>
+<br>
+
+--
+- Tool for (mostly) descriptive statistics
+<br>
+<br>
+
+--
+- You .yellow1[can] use it without code
+<br>
+<br>
+
+--
 - Desktop-version is free, and the rest costs
 <br>
 <br>
+
+--
 - Can handle most data sources...even big data!
 <br>
 <br>
 
-
+--
+- can do webscraping, text-analyzes, machine-learning
 
 ---
 class: inverse left 
@@ -279,10 +304,17 @@ background-position: center middle
 ## Basic PBI pipeline
 
 
-  
+
+---
+class: inverse center middle
+
+.animated.heartBeat.dib2[Breaktime!!]
+
 ---
 
 ## Group discussions
+
+--
 
 .pull-left[
 
@@ -314,12 +346,6 @@ background-position: center middle
 <br>
 ]
 
-
-
----
-class: inverse center middle
-
-.animated.heartBeat.dib2[Breaktime!!]
 
 ---
 ## Main parts of Power BI
@@ -359,7 +385,7 @@ class: inverse center middle
 <br>
 <br>
 <br>
-<span style="color: #EFBE43;font-size: 3em;"> Lets open Power BI Desktop!!</span>
+.animated.heartBeat.dib2.yellow[Lets open Power BI!]
 
 
 ---
@@ -384,6 +410,8 @@ class: inverse center middle
 ---
 
 ## Building a data model
+
+--
 .pull-left[
 
 ### Star schema
@@ -409,9 +437,19 @@ class: inverse center middle
 ```{r, echo=FALSE, out.width="50%"}
 knitr::include_graphics("pictures/star_schema.png")
 ```
+
+]
+
 --
 .animated.pulse.dib.yellow[Lets open Power BI!]
-]
+
+
+???
+
+- Create date table
+<br>
+<br>
+- Create region_dim
 
 
 ---
@@ -437,14 +475,19 @@ knitr::include_graphics("pictures/star_schema.png")
 
 
 ---
-## DAX & MEASURES
+## DAX
 
+--
 - DAX is the "programming language" of the report window. [See documentation](https://docs.microsoft.com/en-us/dax/dax-overview) 
 <br>
 <br>
+
+--
 - DAX is used to create measures, calculated columns and calculated tables. 
 <br>
 <br>
+
+--
 
 <style>
 div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-radius: 5px; padding: 20px;}
@@ -453,9 +496,14 @@ div.blue { color: #FDF7E9; font-size: 1.0em; background-color:#EFBE43; border-ra
 Measures are dynamic calculation formulas where the results change depending on context.
 </div>
 
+
+--
+
 - Measures a by far the most important and the focus in this course. 
 <br>
 <br>
+
+--
 - Organize your Measures in a separate table
 
 .pull-right[
@@ -518,9 +566,55 @@ some DAX!!]
 
 
 ---
-Task 3: Write more DAX
 
-- 
+## Task 3: Write more DAX
+
+- Create a visual that in some way shows the number of workers in each region.
+<br>
+<br>
+
+--
+- Insert a slicer that lets the "user" filter by year.  
+<br>
+<br>
+
+--
+- Create a measures that shows the count of working people last year relative to the chosen year. Copy-paste the visual from [1] and replace the measure with the new measure. 
+
+
+---
+
+## Project for day 2
+
+
+- Pick a data source that is relevant to you and your work (API, database, csv, web, etc.)
+<br>
+<br>
+- Think about what you want to display 
+<br>
+<br>
+- Build a data model with the data
+<br>
+<br>
+- Use dax to calculate measures
+<br>
+<br>
+- Use company colors and logos to beatify your report
+<br>
+<br>
+- Do a project that lets finish in a day (dont be over-ambitious...)
+<br>
+<br>
+- Send us pdf-copy at the end of the day
+<br>
+<br>
+- On day 3 you show it to the group and discuss
+<br><br>
+
+.yellow.dib[GOOD LUCK &#128513;]
+
+
+
 
 
 
