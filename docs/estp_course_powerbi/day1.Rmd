@@ -614,6 +614,19 @@ some DAX!!]
 .yellow.dib[GOOD LUCK &#128513;]
 
 
+---
+
+## Discussing the tasks
+
+- How was to work with Power BI? 
+<br>
+<br>
+- What was the most difficult? 
+<br>
+<br>
+- Did you model your data? 
+
+
 
 
 
