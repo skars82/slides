@@ -1,0 +1,246 @@
+---
+title: "Introduction to business intelligence in public statistics (Power BI)"
+subtitle: "Day 1"  
+author: 
+  - "Øyvind Bruer-Skarsbø (SSB)"
+  - "Carl Franklin Corneil (SSB)"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: [xaringan-themer.css, custom.css]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+class: middle center
+background-image: url(pictures/PowerBI_logo.png)
+background-position: left
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "https://github.com/skars82/slides") %>% 
+  meta_social(
+    title = "Introduction to business intelligence in public statistics (Power BI)",
+    description = paste(
+      "3-day course in how a business intelligence tool lik Power BI can be used in public statistics. ",
+      "Course held by European Statitical Training Programme (ESTP) in april of 2021."
+    ),
+    url = "https://skars82.github.io/slides/estp_course_powerbi/day1.html#1",
+    image = "https://github.com/skars82/slides/tree/master/docs/estp_course_powerbi/pictures/twitter_slide.png",
+    image_alt = paste(
+      "Title slide of day 1 of ESTP-course in Power BI:", 
+      "How can Power BI be utilized in public statistics.", 
+      "Estp-course held in april of 2021."
+    ),
+    og_type = "website",
+    og_author = "Øyvind Bruer-Skarsbø",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@YSkarsb",
+    twitter_site = "@YSkarsb"
+  )
+```
+
+```{r, echo=FALSE}
+dark_yellow <- "#EFBE43"
+light_yellow <- "#FDF7E9"
+gray <- "#333333"
+blue <- "#4466B0"
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(
+  # colors
+  primary_color = light_yellow,
+  secondary_color = dark_yellow,
+  header_color = gray,
+  text_color = gray,
+  code_inline_color = colorspace::lighten(gray),
+  text_bold_color = colorspace::lighten(gray),
+  link_color = "#D6950F",
+  title_slide_text_color = blue,
+          # fonts
+          header_font_google = google_font("Martel"),
+          text_font_google = google_font("Lato"),
+          code_font_google = google_font("Fira Mono"))
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "pictures/ssb-logo-rgb300pxl.png", position=xaringanExtra::css_position(top="1em", right="1em")
+)
+```
+
+```{r xaringan-animate-all, echo=FALSE}
+xaringanExtra::use_animate_css()
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+.title[Hva kan Power BI brukes til i Statistisk sentralbyrå?]
+
+.title[.posi2[Øyvind Bruer-Skarsbø og Carl Franklin Corneil, AM 12.05.2021]]
+<br>
+
+
+???
+
+
+
+---
+
+## Utgangspunkt for diskusjonen
+
+- Alt skjer i nettleseren!!
+--
+<br>
+<br>
+- Spesielt kommunikasjon av data
+--
+<br>
+<br>
+- nettinnhold skrives i .yellow1[html], .yellow1[css] og .animated.heartBeat.dib2.yellow1[javascript]
+--
+<br>
+<br>
+- men IKKE en hensiktmessig måte for oss i statistikkseksjon å jobbe
+--
+<br>
+<br>
+- Hvilke verktøy har vi til å lage fullt interaktive visualiseringer i SSB? 
+
+
+---
+
+## Verktøy tilgjengelig i SSB
+
+- Kode direkte i html, css og Javascript
+--
+<br>
+<br>
+- Python og R (tidskrevende!)
+--
+<br>
+<br>
+- BI-verktøy (Power BI, SAS Visual Analytics, Tableu, Grafana, etc.)
+
+--
+<br>
+<br>
+<br>
+<br>
+.animated.heartBeat.dib2.yellow1.center[Hvorfor Power BI?]
+
+
+---
+
+## Hvorfor Power BI? 
+
+- Microsoft-produkt
+--
+<br>
+<br>
+- "enkelt å bruke"
+--
+<br>
+<br>
+- det mest brukte BI-verktøyet i verden!?
+--
+<br>
+<br>
+- passer bra med Dapla
+
+## Hva kan Power BI brukes til? 
+
+--
+- www.ssb.no
+--
+<br>
+<br>
+- editering
+--
+<br>
+<br>
+- Oppdrag
+--
+<br>
+<br>
+- som resten av verden bruker det: dynamisk driftsstyringstavle for ledere, administrasjon og andre. Enkel tilgang til informasjon som oppdateres automatisk, og hvor du bestemmer hva du vil se. Er med på å gjøre organisasjoner med datadrevne og automatiserte.  
+
+
+---
+
+## Utfordringer med Power BI
+
+- *nok et verktøy å lære seg* 😰
+--
+<br>
+<br>
+- sikre seg at verktøyet ikke blir en del av produksjonsløpet
+--
+<br>
+<br>
+- ikke open-source
+--
+<br>
+<br>
+- lisenser koster penger
+--
+<br>
+<br>
+- ikke et verktøy for å oppdatere databaser. Du finner feil men retter de ikke i samme sted.
+
+---
+
+## Mulig vei videre
+
+--
+
+.pull-left[
+### Editering
+
+-  
+
+]
+
+--
+
+
+.pull-right[
+### ssb.no
+
+-  
+
+]
+

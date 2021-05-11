@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to business intelligence in public statistics (Power BI)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Øyvind Bruer-Skarsbø (SSB)" />
+    <meta name="author" content="Carl Franklin Corneil (SSB)" />
+    <meta name="date" content="2021-05-10" />
+    <script src="slides_for_am_files/header-attrs/header-attrs.js"></script>
+    <meta name="github-repo" content="https://github.com/skars82/slides"/>
+    <meta name="twitter:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
+    <meta name="twitter:description" content="3-day course in how a business intelligence tool lik Power BI can be used in public statistics.  Course held by European Statitical Training Programme (ESTP) in april of 2021."/>
+    <meta name="twitter:url" content="https://skars82.github.io/slides/estp_course_powerbi/day1.html#1"/>
+    <meta name="twitter:image:src" content="https://github.com/skars82/slides/tree/master/docs/estp_course_powerbi/pictures/twitter_slide.png"/>
+    <meta name="twitter:image:alt" content="Title slide of day 1 of ESTP-course in Power BI: How can Power BI be utilized in public statistics. Estp-course held in april of 2021."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@YSkarsb"/>
+    <meta name="twitter:site" content="@YSkarsb"/>
+    <meta property="og:title" content="Introduction to business intelligence in public statistics (Power BI)"/>
+    <meta property="og:description" content="3-day course in how a business intelligence tool lik Power BI can be used in public statistics.  Course held by European Statitical Training Programme (ESTP) in april of 2021."/>
+    <meta property="og:url" content="https://skars82.github.io/slides/estp_course_powerbi/day1.html#1"/>
+    <meta property="og:image" content="https://github.com/skars82/slides/tree/master/docs/estp_course_powerbi/pictures/twitter_slide.png"/>
+    <meta property="og:image:alt" content="Title slide of day 1 of ESTP-course in Power BI: How can Power BI be utilized in public statistics. Estp-course held in april of 2021."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Øyvind Bruer-Skarsbø"/>
+    <link href="slides_for_am_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="slides_for_am_files/tile-view/tile-view.js"></script>
+    <script src="slides_for_am_files/clipboard/clipboard.min.js"></script>
+    <link href="slides_for_am_files/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="slides_for_am_files/shareon/shareon.min.js"></script>
+    <link href="slides_for_am_files/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="slides_for_am_files/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="slides_for_am_files/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="slides_for_am_files/fabric/fabric.min.js"></script>
+    <link href="slides_for_am_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="slides_for_am_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: middle center
+background-image: url(pictures/PowerBI_logo.png)
+background-position: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(pictures/ssb-logo-rgb300pxl.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+.title[Hva kan Power BI brukes til i Statistisk sentralbyrå?]
+
+.title[.posi2[Øyvind Bruer-Skarsbø og Carl Franklin Corneil, AM 12.05.2021]]
+&lt;br&gt;
+
+
+???
+
+
+
+---
+
+## Utgangspunkt for diskusjonen
+
+- Alt skjer i nettleseren!!
+--
+&lt;br&gt;
+&lt;br&gt;
+- Spesielt kommunikasjon av data
+--
+&lt;br&gt;
+&lt;br&gt;
+- nettinnhold skrives i .yellow1[html], .yellow1[css] og .animated.heartBeat.dib2.yellow1[javascript]
+--
+&lt;br&gt;
+&lt;br&gt;
+- men IKKE en hensiktmessig måte for oss i statistikkseksjon å jobbe
+--
+&lt;br&gt;
+&lt;br&gt;
+- Hvilke verktøy har vi til å lage fullt interaktive visualiseringer i SSB? 
+
+
+---
+
+## Verktøy tilgjengelig i SSB
+
+- Kode direkte i html, css og Javascript
+--
+&lt;br&gt;
+&lt;br&gt;
+- Python og R (tidskrevende!)
+--
+&lt;br&gt;
+&lt;br&gt;
+- BI-verktøy (Power BI, SAS Visual Analytics, Tableu, Grafana, etc.)
+
+--
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.animated.heartBeat.dib2.yellow1.center[Hvorfor Power BI?]
+
+
+---
+
+## Hvorfor Power BI? 
+
+- Microsoft-produkt
+--
+&lt;br&gt;
+&lt;br&gt;
+- "enkelt å bruke"
+--
+&lt;br&gt;
+&lt;br&gt;
+- det mest brukte BI-verktøyet i verden!?
+--
+&lt;br&gt;
+&lt;br&gt;
+- passer bra med Dapla
+
+## Hva kan Power BI brukes til? 
+
+--
+- www.ssb.no
+--
+&lt;br&gt;
+&lt;br&gt;
+- editering
+--
+&lt;br&gt;
+&lt;br&gt;
+- Oppdrag
+--
+&lt;br&gt;
+&lt;br&gt;
+- som resten av verden bruker det: dynamisk driftsstyringstavle for ledere, administrasjon og andre. Enkel tilgang til informasjon som oppdateres automatisk, og hvor du bestemmer hva du vil se. Er med på å gjøre organisasjoner med datadrevne og automatiserte.  
+
+
+---
+
+## Utfordringer med Power BI
+
+- *nok et verktøy å lære seg* 😰
+--
+&lt;br&gt;
+&lt;br&gt;
+- sikre seg at verktøyet ikke blir en del av produksjonsløpet
+--
+&lt;br&gt;
+&lt;br&gt;
+- ikke open-source
+--
+&lt;br&gt;
+&lt;br&gt;
+- lisenser koster penger
+--
+&lt;br&gt;
+&lt;br&gt;
+- ikke et verktøy for å oppdatere databaser. Du finner feil men retter de ikke i samme sted.
+
+---
+
+## Mulig vei videre
+
+--
+
+.pull-left[
+### Editering
+
+-  
+
+]
+
+--
+
+
+.pull-right[
+### ssb.no
+
+-  
+
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
