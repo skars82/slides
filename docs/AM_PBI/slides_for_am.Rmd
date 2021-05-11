@@ -35,31 +35,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r metathis, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_name("github-repo" = "https://github.com/skars82/slides") %>% 
-  meta_social(
-    title = "Introduction to business intelligence in public statistics (Power BI)",
-    description = paste(
-      "3-day course in how a business intelligence tool lik Power BI can be used in public statistics. ",
-      "Course held by European Statitical Training Programme (ESTP) in april of 2021."
-    ),
-    url = "https://skars82.github.io/slides/estp_course_powerbi/day1.html#1",
-    image = "https://github.com/skars82/slides/tree/master/docs/estp_course_powerbi/pictures/twitter_slide.png",
-    image_alt = paste(
-      "Title slide of day 1 of ESTP-course in Power BI:", 
-      "How can Power BI be utilized in public statistics.", 
-      "Estp-course held in april of 2021."
-    ),
-    og_type = "website",
-    og_author = "Øyvind Bruer-Skarsbø",
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@YSkarsb",
-    twitter_site = "@YSkarsb"
-  )
-```
-
 ```{r, echo=FALSE}
 dark_yellow <- "#EFBE43"
 light_yellow <- "#FDF7E9"
@@ -108,9 +83,11 @@ xaringanExtra::use_animate_css()
 xaringanExtra::use_scribble()
 ```
 
+
+
 .title[Hva kan Power BI brukes til i Statistisk sentralbyrå?]
 
-.title[.posi2[Øyvind Bruer-Skarsbø og Carl Franklin Corneil, AM 12.05.2021]]
+.title[.posi2[Øyvind Bruer-Skarsbø (S312) og Carl Franklin Corneil (S360), AM 12.05.2021]]
 <br>
 
 
@@ -122,6 +99,12 @@ xaringanExtra::use_scribble()
 
 ## Utgangspunkt for diskusjonen
 
+--
+
+- SSB trenger mer og bedre visualsering av alle ledd i statistikkproduksjon
+--
+<br>
+<br>
 - Alt skjer i nettleseren!!
 --
 <br>
@@ -138,7 +121,7 @@ xaringanExtra::use_scribble()
 --
 <br>
 <br>
-- Hvilke verktøy har vi til å lage fullt interaktive visualiseringer i SSB? 
+- Hvilke verktøy har vi til å lage [fullt interaktive visualiseringer](https://app.powerbi.com/groups/me/reports/73854bd9-fd68-4e9a-99a3-1214894d04e9/ReportSection9dfd2c1ef69f4280de30) i SSB ([ikke semi-interaktive](https://www.ssb.no/arbeid-og-lonn/artikler-og-publikasjoner/svak-nedgang-i-sykefravaeret--447470))? 
 
 
 ---
@@ -181,6 +164,8 @@ xaringanExtra::use_scribble()
 <br>
 - passer bra med Dapla
 
+---
+
 ## Hva kan Power BI brukes til? 
 
 --
@@ -188,7 +173,7 @@ xaringanExtra::use_scribble()
 --
 <br>
 <br>
-- editering
+- kvalitetsanalyse/editering
 --
 <br>
 <br>
@@ -225,12 +210,20 @@ xaringanExtra::use_scribble()
 
 ## Mulig vei videre
 
+Holde et kurs til høsten som fokuserer på en av disse:
+
 --
 
 .pull-left[
 ### Editering
 
--  
+- "øving" på gammel plattform
+<br>
+<br>
+- mulig testing mot DAPLA innen et års tid
+
+
+![](pictures/dapla_no_back.png)
 
 ]
 
@@ -238,9 +231,20 @@ xaringanExtra::use_scribble()
 
 
 .pull-right[
-### ssb.no
+### SSB.NO
 
--  
-
+- komme i gang med en gang
+<br>
+<br>
+- "Oversette" dagens visualseringer til å bli interaktive
+<br>
+<br>
+- utvikle nye måter å vise dataene
+<br>
+<br>
+- drevet i større grad av statistikkseksjonene ( med T. Bjørnskau som visuell redaktør?)
+<br>
+<br>
+- samarbeid med webutviklerne på nye ssb.no
 ]
 
