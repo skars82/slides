@@ -101,7 +101,7 @@ xaringanExtra::use_scribble()
 
 --
 
-- SSB trenger mer og bedre visualsering av alle ledd i statistikkproduksjon
+- SSB trenger mer og bedre visualisering i alle ledd av statistikkproduksjonen
 --
 <br>
 <br>
@@ -118,6 +118,10 @@ xaringanExtra::use_scribble()
 <br>
 <br>
 - men IKKE en hensiktmessig måte for oss i statistikkseksjon å jobbe
+--
+<br>
+<br>
+- trenger en database også som mater disse visualseringene også
 --
 <br>
 <br>
@@ -236,7 +240,7 @@ Holde et kurs til høsten som fokuserer på en av disse:
 - komme i gang med en gang
 <br>
 <br>
-- "Oversette" dagens visualseringer til å bli interaktive
+- "Oversette" dagens visualiseringer til å bli interaktive
 <br>
 <br>
 - utvikle nye måter å vise dataene
