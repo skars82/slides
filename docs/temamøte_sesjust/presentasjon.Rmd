@@ -1,0 +1,221 @@
+---
+title: "Erfaringer/tanker rundt sesongjustering med RJDemetra/Jdemetra+"
+author: "Øyvind Bruer-Skarsbø"
+date: "9. juni 2021"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "custom.css"]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-animate-all, echo=FALSE}
+xaringanExtra::use_animate_css()
+```
+
+## Sesongjustering av arblonn
+
+- Månedlig statistikk over arbeidsmarkedet (lønn, jobber og lønnstakere)
+
+--
+
+- 102 serier
+
+--
+
+
+- Bruker `RJDemetra`, et grensesnitt mot `Jdemetra`, til å bygge spesifikasjonsfilene som trengs for å sesongjustere. Sesongjustering i produksjon vil skjer med `RJWSACruncher`, som igjen er et R-grensesnitt mot `JWSACruncher` og tillater deg å bruke ulike refresh-policies...😰  
+
+--
+
+
+.center2[![](https://media.giphy.com/media/10o3Um2U3wa4DK/giphy.gif)] 
+
+
+---
+
+## Hvorfor Jdemetra+?
+
+
+- Anbefalt software av ESS for bruk i sesongjustering av offisiell statistikk.
+
+--
+
+- Utviklet av **National Bank of Belgium**, **Deutsche Bundesbank** og **Eurostat**.
+
+
+--
+
+- Mål: harmonisere software og prakis på tvers av Eurostat-land.
+
+
+--
+
+  
+- **Jdemetra+** = samling uavhengig software-komponenter: 
+
+  - open-source / free-source 
+  
+  - skrevet i **Java**
+  
+  - objekt-orientert -> lett å utvide/bygge på
+  
+  - plattform-uavhengig
+  
+  - kommer med verktøy for batch-prosessering (**JWSACruncher**)
+  
+  - følger med et "brukervennlig" grensesnitt (**vise?**)
+  
+---
+
+## Hvorfor Jdemetra+?
+
+  
+- IT/DAPLA-vennlig
+
+- Får mye gratis utvikling av de andre Eurostat-landene
+
+- Kan utvikle det etter egne behov 
+
+- Support / nye versjoner
+  
+
+---
+
+## Hvorfor R/RJdemetra?
+
+--
+
+- Pek-og-klikk er for begrensende (men absolutt nyttig til tider)
+
+--
+
+- Statistikkseksjonene ~~skal jobbe i Jupyterlab~~ kan jobbe i RStudio 
+
+--
+
+- Statistikkseksjonene kan drive utvikling av funksjonalitet (versjonshåndtere og dele arbeid)
+
+--
+<br>
+<br>
+
+> *Hva hvis seksjonen min velger python som språk?*
+
+--
+
+
+- Bruk Jdemetra+
+
+- IT kan bygge en python-pakke mot Java-biblioteket???
+
+- Bruk R til å hente ut data og konvertere til et python-vennlig format
+
+- ...
+
+  
+
+
+
+
+---
+class: inverse center middle
+
+```{r, echo=FALSE}
+library(nomnoml)
+```
+
+```{nomnoml, svg=TRUE, echo=FALSE}
+#stroke: #1F4257
+#.box: fill=#F97B64 dashed visual=ellipse
+
+[Jdemetra+
+   (Java-bibliotek)] -->[Klassisk grensesnitt]
+[Jdemetra+
+    (Java-bibliotek)] -->[R-grensesnitt (RJDemetra)]
+[Klassisk grensesnitt] -->[JWSACruncher]
+[R-grensesnitt (RJDemetra)] -->[RJWSACruncher]
+
+```
+
+
+---
+
+## Hvordan skal produksjonsløpet bygges?
+
+--
+
+#### Basert på råd av **Alain Quartier** som bygget RJDemetra:
+
+--
+
+
+1. Lag en default-spec i Jdemetra+
+
+2. Importer workspace til R
+
+3. Bygg/test spec
+
+3. Eksporter workspace
+
+4. Kjør med **RJWSACruncher** eller **JWSACruncher**
+
+5a. Noe output går videre i produksjon.. 
+
+5b. noe output går til visualseringer, rapporter, årlig gjennomgang, etc..
+
+---
+
+### Men hvordan skal alle filene/kode som brukes og genereres i sesongjusteringen organsierer? 
+
+> *Hva med tidy models eller en "nested table" som organiserer alt?* 
+
+![](https://media.giphy.com/media/RjpE964WUAE5a/giphy.gif)
+
+
+---
+class: inverse center middle
+
+### Takk for meg!
+
+
+
+
+
+ 
+
+
+
+

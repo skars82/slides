@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Erfaringer/tanker rundt sesongjustering med RJDemetra/Jdemetra+</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Øyvind Bruer-Skarsbø" />
+    <script src="presentasjon_files/header-attrs/header-attrs.js"></script>
+    <link href="presentasjon_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="presentasjon_files/tile-view/tile-view.js"></script>
+    <script src="presentasjon_files/fabric/fabric.min.js"></script>
+    <link href="presentasjon_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="presentasjon_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <link href="presentasjon_files/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="presentasjon_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="presentasjon_files/es6shim/es6shim.js"></script>
+    <script src="presentasjon_files/es7shim/es7shim.js"></script>
+    <script src="presentasjon_files/graphre/graphre.js"></script>
+    <script src="presentasjon_files/nomnoml/nomnoml.js"></script>
+    <script src="presentasjon_files/nomnoml-binding/nomnoml.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Erfaringer/tanker rundt sesongjustering med RJDemetra/Jdemetra+
+### Øyvind Bruer-Skarsbø
+### 9. juni 2021
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## Sesongjustering av arblonn
+
+- Månedlig statistikk over arbeidsmarkedet (lønn, jobber og lønnstakere)
+
+--
+
+- 102 serier
+
+--
+
+
+- Bruker `RJDemetra`, et grensesnitt mot `Jdemetra`, til å bygge spesifikasjonsfilene som trengs for å sesongjustere. Sesongjustering i produksjon vil skjer med `RJWSACruncher`, som igjen er et R-grensesnitt mot `JWSACruncher` og tillater deg å bruke ulike refresh-policies...😰  
+
+--
+
+
+.center2[![](https://media.giphy.com/media/10o3Um2U3wa4DK/giphy.gif)] 
+
+
+---
+
+## Hvorfor Jdemetra+?
+
+
+- Anbefalt software av ESS for bruk i sesongjustering av offisiell statistikk.
+
+--
+
+- Utviklet av **National Bank of Belgium**, **Deutsche Bundesbank** og **Eurostat**.
+
+
+--
+
+- Mål: harmonisere software og prakis på tvers av Eurostat-land.
+
+
+--
+
+  
+- **Jdemetra+** = samling uavhengig software-komponenter: 
+
+  - open-source / free-source 
+  
+  - skrevet i **Java**
+  
+  - objekt-orientert -&gt; lett å utvide/bygge på
+  
+  - plattform-uavhengig
+  
+  - kommer med verktøy for batch-prosessering (**JWSACruncher**)
+  
+  - følger med et "brukervennlig" grensesnitt (**vise?**)
+  
+---
+
+## Hvorfor Jdemetra+?
+
+  
+- IT/DAPLA-vennlig
+
+- Får mye gratis utvikling av de andre Eurostat-landene
+
+- Kan utvikle det etter egne behov 
+
+- Support / nye versjoner
+  
+
+---
+
+## Hvorfor R/RJdemetra?
+
+--
+
+- Pek-og-klikk er for begrensende (men absolutt nyttig til tider)
+
+--
+
+- Statistikkseksjonene ~~skal jobbe i Jupyterlab~~ kan jobbe i RStudio 
+
+--
+
+- Statistikkseksjonene kan drive utvikling av funksjonalitet (versjonshåndtere og dele arbeid)
+
+--
+&lt;br&gt;
+&lt;br&gt;
+
+&gt; *Hva hvis seksjonen min velger python som språk?*
+
+--
+
+
+- Bruk Jdemetra+
+
+- IT kan bygge en python-pakke mot Java-biblioteket???
+
+- Bruk R til å hente ut data og konvertere til et python-vennlig format
+
+- ...
+
+  
+
+
+
+
+---
+class: inverse center middle
+
+
+
+<div id="htmlwidget-95ea1b67b13f3be6ebb3" style="width:100%;height:252px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-95ea1b67b13f3be6ebb3">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #1F4257\n#.box: fill=#F97B64 dashed visual=ellipse\n\n[Jdemetra+\n   (Java-bibliotek)] -->[Klassisk grensesnitt]\n[Jdemetra+\n    (Java-bibliotek)] -->[R-grensesnitt (RJDemetra)]\n[Klassisk grensesnitt] -->[JWSACruncher]\n[R-grensesnitt (RJDemetra)] -->[RJWSACruncher]\n","svg":false},"evals":[],"jsHooks":[]}</script>
+
+
+---
+
+## Hvordan skal produksjonsløpet bygges?
+
+--
+
+#### Basert på råd av **Alain Quartier** som bygget RJDemetra:
+
+--
+
+
+1. Lag en default-spec i Jdemetra+
+
+2. Importer workspace til R
+
+3. Bygg/test spec
+
+3. Eksporter workspace
+
+4. Kjør med **RJWSACruncher** eller **JWSACruncher**
+
+5a. Noe output går videre i produksjon.. 
+
+5b. noe output går til visualseringer, rapporter, årlig gjennomgang, etc..
+
+---
+
+### Men hvordan skal alle filene/kode som brukes og genereres i sesongjusteringen organsierer? 
+
+&gt; *Hva med tidy models eller en "nested table" som organiserer alt?* 
+
+![](https://media.giphy.com/media/RjpE964WUAE5a/giphy.gif)
+
+
+---
+class: inverse center middle
+
+### Takk for meg!
+
+
+
+
+
+ 
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
