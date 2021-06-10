@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+
+
+<pre class="r"><code>tabeller &lt;- c(&quot;12439&quot;, &quot;12440&quot;)
+filsti=&quot;C:/Users/obr/&quot;
+
+hent.statbank &lt;- function(tableno) 
+{
+  url &lt;- paste0(&quot;http://data.ssb.no/api/v0/no/table/&quot;, tableno)
+  no.vars &lt;- length(PxWebApiData::ApiData(url,returnMetaFrames=T))
+  data &lt;- do.call(PxWebApiData::ApiData1, c(url, as.list(rep(TRUE, no.vars))))
+  filnavn &lt;- paste0(filsti,&quot;tabell_&quot;, tableno, &quot;.xlsx&quot;)
+  writexl::write_xlsx(data, filnavn)
+}
+
+lapply(tabeller, hent.statbank)
+#&gt; [[1]]
+#&gt; [1] &quot;C:\\Users\\obr\\tabell_12439.xlsx&quot;
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;C:\\Users\\obr\\tabell_12440.xlsx&quot;</code></pre>
+<p><sup>Created on 2021-06-03 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v2.0.0)</sup></p>
