@@ -75,7 +75,7 @@ xaringanExtra::use_tile_view()
 ---
 class: inverse center middle
 
-# Velkommen til Øyvinds technotalk!
+# Velkommen til Øyvinds ~~Ted Talk~~ technotalk!
 
 
 ![](https://media.giphy.com/media/PvKlwYTiKATRe/giphy.gif)
@@ -96,11 +96,149 @@ class: inverse center middle
 
 
 ---
-class: center middle
-background-image: url(pictures/linux1.PNG) 
+
+## LINUX - hvorfor er det fortsatt relevante etter 25+ år ?
+
+--
+
+- Open source / free-source
+
+--
+
+- Sikkert, tar liten plass, kan konfigureres som man vil
 
 
 
+- hvor blir det brukt: 
+
+  - alle supercomputere
+  
+  - de fleste webservere
+  
+  - mobiltelefoner, smart-produkter, etc.
+  
+  - alle servere hvor man jobber med mye data (les SSB)
+  
+  - men ikke personlige laptoper...
+  
+
+- generell, tidløs kunnskap
+
+
+---
+class: center 
+
+## Linux-ressurser
+
+
+ [**Villunds Wiki**](https://wiki.ssb.no/display/AOLD/Linux)
+
+[**Øyvinds config-filer**](https://git-adm.ssb.no/users/obr/repos/dotfiles_redhat/browse)
+
+[**The Missing Semester på MIT**](https://missing.csail.mit.edu/)
+
+
+[**For samfunnsøkonomer/samfunnsvitere**](https://github.com/uo-ec607/lectures)
+
+
+
+---
+
+## GIT - versjonshåndtering av kode, ++
+
+--
+
+- Noe som helt sikkert kommer på Dapla
+
+--
+
+- GIT versjonshåndterer kode, men gjør masse annet også
+
+--
+
+- GIT er et Linux-program! 
+
+--
+
+- GIT er ikke GITHUB eller BITBUCKET!
+
+--
+
+- Potensielt enorme gevinster hvis alle lærer seg dette
+
+--
+
+- SAS EG 8.x har en innebygd GIT-integrasjon. Ta det i bruk!
+
+-- 
+
+- tid til demo??
+
+
+---
+
+## Teksteditor vs IDE (veldig kort)
+
+- teksteditorer er alltid nyttig i en statistikkproduksjon
+
+- Hvilke finnes på Linux? 
+
+- Hva er en IDE? 
+
+- [**Hva blir vi servert på DAPLA?**](https://skars82.github.io/slides/diverse/oppstart_dapla.html#7) 
+
+
+
+---
+
+## Lag nettsider enkelt
+
+- Markdown er en syntax kan bli tolket og oversatt til andre filtyper
+
+- Skriv en ren tekstfil, få tilbake html, docs, pptx, pdf, etc
+
+- Ekstremt kodevennlig siden det er tekstfiler
+
+- Demo! 
+
+
+---
+
+## Visualisering med markdown
+
+- Markdown er bra for å levere tekst og kode til andre (les ssb.no, oppdrag, etc.)
+
+- Man kan kode i markdown, så man kan enkelt lage semi-interaktive visualsieringer i teksten. 
+
+- Det gjør at man kan skrive artikkel og lage figurer sømløst
+
+- Men ssb.no må "godkjenne" html-koden. utviklingsprosjekt på gang
+
+---
+
+## Visualisering med BI-verktøy
+
+- full interaktivitet <=> "database" i bakgrunn
+
+- tillater en helt annen størrelse på dataene, og mye mer interaktivitet.
+
+- men må integreres på en helt annen måte. 
+
+- foreløpig løsning: embedd fra PowerBI.com eller Tableu.com
+
+
+---
+
+
+## Diskusjon
+
+- Hva med å starte en gruppe med de som er interessert i komme i gang
+
+- legg over en statistikk til GIT
+
+- Hvordan bygge automatiske rapporter med Markdown (fra SAS)?
+
+- Bygg et dashboard for statistikken din med Power BI? 
 
 
 
