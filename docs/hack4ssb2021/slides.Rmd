@@ -15,7 +15,9 @@ class: middle center
 background-image: url(img/logo.png)
 background-position: middle
 
-.title[Fra .dapla[{DAPLA}] til .ssb[SSB.NO] med .animated.bounce.dib[MARKDOWN]]
+--
+
+.title[fra .dapla[{dapla}] til .ssb[ssb.no] med .animated.bounce.dib.md[markdown]]
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -36,8 +38,10 @@ style_duo(
   primary_color = "#FFFFFF",
   secondary_color = "#C4351C",
   header_font_google = google_font("Barlow Condensed, sans-serif"),
-  text_font_google   = google_font("Abril Fatface, cursive"),
-  text_bold_color = "#1a9d49"
+  text_font_google   = google_font("Roboto Condensed, sans-serif"),
+  text_bold_color = "#1a9d49",
+  text_font_size = "1.5rem",
+  header_h1_font_size = "3rem"
 )
 xaringanExtra::use_tile_view()
 xaringanExtra::use_share_again()
@@ -54,7 +58,7 @@ xaringanExtra::use_tachyons()
 ---
 class: middle center inverse
 
-## Gruppa
+# Gruppa
 
 Glenruben Engen Larsen- 700
 
@@ -64,7 +68,7 @@ Carl Franklin Corneil - 300
 
 Johnnadel Salita Uy- 700
 
-Siv Marsteinstrædet- 600
+Siv Marsteintrædet- 600
 
 Thomas Bjørnskau - 600
 
@@ -78,46 +82,105 @@ Rune Johansen - 700
 
 --
 
-- Sende markdown-tekst fra Dapla++ til EnonicXP
+- Sende markdown-tekst fra Dapla++ til EnonicXP ☐
+
+---
+
+# Vårt prosjekt
+
+
+- Sende markdown-tekst fra Dapla++ til EnonicXP &#9989;
+
+
+---
+
+# Vårt prosjekt
+
+- Sende markdown-tekst fra Dapla++ til EnonicXP &#9989;
 <br>
 <br>
+
+
+- Sende interaktive figurer sammen med teksten ☐
+
+---
+
+# Vårt prosjekt
+
+- Sende markdown-tekst fra Dapla++ til EnonicXP &#9989;
+<br>
+<br>
+
+
+- Sende interaktive figurer sammen med teksten &#9989;
 
 --
-- Sende interaktive figurer sammen med teksten.
 
-![](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif?cid=ecf05e47itxni73ksbr3hckquht487o5lhuavbgxmll7vij7&rid=giphy.gif&ct=g)
+.right2[![](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif?cid=ecf05e47itxni73ksbr3hckquht487o5lhuavbgxmll7vij7&rid=giphy.gif&ct=g)]
 
-
----
-class: middle center
-
-# Hva er markdown? Bilde fra Thomas 
 
 ---
-class: middle center
+background-image: url(img/prosessflyt02.png)
+background-size: 70%
 
-# Demo med Carl eller Øyvind
+# Hva er markdown?
+
+---
+background-image: url(img/pp1.jpg)
+background-size: 90%
+
+
+# Hva kan markdown gjøre? 
+
+---
+background-image: url(img/pp2.png)
+background-size: 90%
+
+# Hva kan markdown gjøre? 
+
+---
+background-image: url(img/pp3.png)
+background-size: 90%
+
+# Hva kan markdown gjøre? 
+
+---
+background-image: url(img/pp4.png)
+background-size: 90%
+
+# Hva kan markdown gjøre? 
+
+---
+class: middle center inverse
+
+# TID FOR .animated.bounce.dib[DEMO]
 
 ---
 class: center middle inverse
 
-## Betydning for SSB og brukere?
+# Betydning for .ssb[SSB] og brukerne våre?
 
 ---
 
-## Datadrevet statistikkproduksjon
+# Datadrevet statistikkproduksjon
 
-- reproduserbarhet
+--
+- 100% i tråd med .dapla[{dapla}] (og hva resten av verden driver med)
 <br>
 <br>
 
 --
-- autogenererte dokumenter
+- fremmer **reproduserbarhet**
 <br>
 <br>
 
 --
-- mer styring over formattering
+- fremmer automatisering
+<br>
+<br>
+
+--
+- programmatisk styring av formattering (wysiwyw) 
 <br>
 <br>
 
@@ -126,7 +189,7 @@ class: center middle inverse
 
 ---
 
-## Forenkler prosess publikasjon på ssb.no
+# Forenkler arbeidsprosesser
 
 - sparer tid
 <br>
@@ -143,30 +206,13 @@ class: center middle inverse
 <br>
 
 ---
+class: center middle inverse
 
-## Verdi for bruker (bilde blodig)
+# Verdi for brukerne?
 
-- tilgjengelighet med html 
-<br>
-<br>
-
---
-- mer responsivt
-<br>
-<br>
-
---
-- kan flytte mer over til html uten IT-ressurser
-<br>
-<br>
-
---
-- kortere lastetid
-<br>
-<br>
-
---
-- enklere å gjøre endringer
+---
+background-image: url(img/blodig.png)
+background-size: 100%
 
 
 
