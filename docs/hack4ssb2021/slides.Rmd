@@ -1,0 +1,175 @@
+---
+title: "Fra Dapla til ssb.no med markdown"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: [xaringan-themer.css, style.css]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+class: middle center
+background-image: url(img/logo.png)
+background-position: middle
+
+.title[Fra .dapla[{DAPLA}] til .ssb[SSB.NO] med .animated.bounce.dib[MARKDOWN]]
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(
+  primary_color = "#FFFFFF",
+  secondary_color = "#C4351C",
+  header_font_google = google_font("Barlow Condensed, sans-serif"),
+  text_font_google   = google_font("Abril Fatface, cursive"),
+  text_bold_color = "#1a9d49"
+)
+xaringanExtra::use_tile_view()
+xaringanExtra::use_share_again()
+xaringanExtra::use_logo(image_url = "img/hack2logo.png")
+xaringanExtra::use_animate_css()
+xaringanExtra::use_scribble()
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_tachyons()
+```
+
+
+
+
+---
+class: middle center inverse
+
+## Gruppa
+
+Glenruben Engen Larsen- 700
+
+Carl Franklin Corneil - 300
+
+Øyvind Bruer-Skarsbø - 300
+
+Johnnadel Salita Uy- 700
+
+Siv Marsteinstrædet- 600
+
+Thomas Bjørnskau - 600
+
+Carina Nordseth- 700
+
+Rune Johansen - 700
+
+---
+
+# Vårt prosjekt
+
+--
+
+- Sende markdown-tekst fra Dapla++ til EnonicXP
+<br>
+<br>
+
+--
+- Sende interaktive figurer sammen med teksten.
+
+![](https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif?cid=ecf05e47itxni73ksbr3hckquht487o5lhuavbgxmll7vij7&rid=giphy.gif&ct=g)
+
+
+---
+class: middle center
+
+# Hva er markdown? Bilde fra Thomas 
+
+---
+class: middle center
+
+# Demo med Carl eller Øyvind
+
+---
+class: center middle inverse
+
+## Betydning for SSB og brukere?
+
+---
+
+## Datadrevet statistikkproduksjon
+
+- reproduserbarhet
+<br>
+<br>
+
+--
+- autogenererte dokumenter
+<br>
+<br>
+
+--
+- mer styring over formattering
+<br>
+<br>
+
+--
+- versjonshåndtering av tekstlig innhold
+
+---
+
+## Forenkler prosess publikasjon på ssb.no
+
+- sparer tid
+<br>
+<br>
+
+--
+- mindre IT-avhengig
+<br>
+<br>
+
+--
+- forfatter kan lage sine egne interaktive visualiseringer
+<br>
+<br>
+
+---
+
+## Verdi for bruker (bilde blodig)
+
+- tilgjengelighet med html 
+<br>
+<br>
+
+--
+- mer responsivt
+<br>
+<br>
+
+--
+- kan flytte mer over til html uten IT-ressurser
+<br>
+<br>
+
+--
+- kortere lastetid
+<br>
+<br>
+
+--
+- enklere å gjøre endringer
+
+
+
+
+       
+

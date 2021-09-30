@@ -1,0 +1,121 @@
+---
+title: "Markdown i SSB"
+subtitle: "Hvordan kan vi bruke det mot SSB"  
+author: 
+  - "Øyvind Bruer-Skarsbø"
+  - "Malin Pettersen"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+```
+
+## Bakgrunn
+
+--
+
+- alt skjer i nettleseren nå om dagen
+
+--
+
+- nettbasert innhold kommer fra tekstfiler (html, javascript, css)
+
+--
+
+- statistikkseksjonene vil kun jobbe med tekstfiler på DAPLA (koding, dokumentasjon, visualiseringer, github-nettsider, ++)
+
+--
+
+- .docx er **IKKE** tekstfiler!
+
+--
+
+- statistikkseksjonene trenger en lett og fleksibel måte levere nettinnhold mot eksterne
+
+--
+
+- **markdown** er helt perfekt til dette formålet! 
+
+
+---
+class: inverse center middle
+
+# Hva er markdown? 
+
+
+---
+
+## Markdown er
+
+- et tekstfil-format
+
+
+- som blir oversatt av en programvare
+
+
+- som til slutt kan ende opp som html, pdf, pptx, docx, etc. 
+
+
+- ekstremt enkelt å skrive
+
+
+- en erstatning for LATEX-type formattering
+
+
+- enkelt å integrere med templates
+
+
+- kodebasert -> kan versjonhåndteres
+
+--
+
+## DEMO?
+
+---
+
+## Mulig vei videre
+
+
+- teste mot det nye tms-et
+
+  - levere tekst? 
+  
+  - levere tekst og figurer? 
+  
+
+- produsere publsieringsklar tekst og visualisering på DAPLA
+
+
+
+
+
+
+
+
+
+

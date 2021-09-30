@@ -1,0 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Dette er en h1 overskrift
+
+ldkjhflkdsjflkjsdlkfjdslkjflkdsjf
+pdlskjføldsjflkdjsflkjdslfk
+ølkfdldsjflkjdsf
+
+**bold** *kursiv*
+
+## Nivå 2 overskrift
