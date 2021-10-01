@@ -205,10 +205,6 @@ class: center middle inverse
 <br>
 <br>
 
----
-class: center middle inverse
-
-# Verdi for brukerne?
 
 ---
 background-image: url(img/blodig.png)
